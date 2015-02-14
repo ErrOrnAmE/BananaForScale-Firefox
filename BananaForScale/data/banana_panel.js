@@ -7,25 +7,25 @@ var kbnn = 0;
 var bnn = 0;
 
 function showBananas() {
-	document.getElementById("bnn").innerHTML = bnn;
+	document.getElementById("bnn").textContent = bnn;
 
 	if ( gbnn == 0 && mbnn == 0 && kbnn == 0 )
 		return;
 
 	document.getElementById("list").children[2].style.display = "list-item";
-  document.getElementById("kbnn").innerHTML = kbnn;
+  document.getElementById("kbnn").textContent = kbnn;
 
 	if ( gbnn == 0 && mbnn == 0 )
 		return;
 
 	document.getElementById("list").children[1].style.display = "list-item";
-  document.getElementById("mbnn").innerHTML = mbnn;
+  document.getElementById("mbnn").textContent = mbnn;
 
 	if ( gbnn == 0 )
 		return;
 
 	document.getElementById("list").children[0].style.display = "list-item";
-  document.getElementById("gbnn").innerHTML = gbnn;
+  document.getElementById("gbnn").textContent = gbnn;
 }
 
 self.port.on("throwBananas", function(px) {
